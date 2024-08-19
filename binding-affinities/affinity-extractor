@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for f in ./artifacts/*.log; do
+    # Extract the name of the file
+    name=$(basename $f)
+    name=${name%.*}
+    # Extract the binding affinity
+    affinity=$(cat $f | grep "Predicted binding" | awk '{print $6}')
+    echo -e "$name\t$affinity" | tee -a ./affinities.tsv
+done
