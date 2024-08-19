@@ -1,0 +1,21 @@
+[{
+ "name": "2024-07-21_23:39_AT3G49580-HOPF3_PMP",
+ "modelSeeds": [
+  "1052686318"
+ ],
+ "sequences": [
+  {
+   "proteinChain": {
+    "sequence": "MANRGGCVTVAAEEMDELRRRNIELSREVAEMKTEMIKLWQRTVVAEEAEEQLCSQLAELEVESLEQARDYHDRMLFLMDQISRLSSSSVVSSS",
+    "count": 1
+   }
+  },
+  {
+   "proteinChain": {
+    "sequence": "MRGLNRRGLTRFKWMCQCWPPAVSIKRRQSRKRLSMHRYFKMPMHQGHLRIRYCSQSGCL",
+    "count": 1
+   }
+  }
+ ]
+}
+]

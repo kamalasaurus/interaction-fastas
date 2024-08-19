@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for f in ./artifacts/*.cif; do
+    # Extract the name of the file
+    name=$(basename $f)
+    name=${name%.*}
+    # Convert the file
+    gemmi convert $f ./artifacts/$name.pdb
+done

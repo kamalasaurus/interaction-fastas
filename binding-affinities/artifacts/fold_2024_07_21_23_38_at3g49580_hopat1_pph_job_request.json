@@ -1,0 +1,21 @@
+[{
+ "name": "2024-07-21_23:38_AT3G49580-HOPAT1_PPH",
+ "modelSeeds": [
+  "1894241913"
+ ],
+ "sequences": [
+  {
+   "proteinChain": {
+    "sequence": "MANRGGCVTVAAEEMDELRRRNIELSREVAEMKTEMIKLWQRTVVAEEAEEQLCSQLAELEVESLEQARDYHDRMLFLMDQISRLSSSSVVSSS",
+    "count": 1
+   }
+  },
+  {
+   "proteinChain": {
+    "sequence": "MVGINNWSSNLDAYRILQEAQSLTEEPPHFDTAFPIEPESIAPPEHHNHRYVIGQEEHRVRRLAANRNKGRPSARAFGNARNNSTRN",
+    "count": 1
+   }
+  }
+ ]
+}
+]

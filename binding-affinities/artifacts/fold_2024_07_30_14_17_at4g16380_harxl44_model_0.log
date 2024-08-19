@@ -1,0 +1,12 @@
+[+] Reading structure file: /Users/kamal/Documents/NYU/bergelson-huang-lab/interaction-fastas/binding-affinities/artifacts/fold_2024_07_30_14_17_at4g16380_harxl44_model_0.pdb
+[+] Parsed structure file fold_2024_07_30_14_17_at4g16380_harxl44_model_0 (2 chains, 298 residues)
+Traceback (most recent call last):
+  File "/Users/kamal/mambaforge/bin/prodigy", line 8, in <module>
+    sys.exit(main())
+  File "/Users/kamal/mambaforge/lib/python3.10/site-packages/prodigy_prot/predict_IC.py", line 413, in main
+    prodigy.predict(
+  File "/Users/kamal/mambaforge/lib/python3.10/site-packages/prodigy_prot/predict_IC.py", line 153, in predict
+    self.ic_network = calculate_ic(
+  File "/Users/kamal/mambaforge/lib/python3.10/site-packages/prodigy_prot/predict_IC.py", line 65, in calculate_ic
+    raise ValueError("No contacts found for selection")
+ValueError: No contacts found for selection

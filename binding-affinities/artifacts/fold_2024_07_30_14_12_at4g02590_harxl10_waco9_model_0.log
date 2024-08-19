@@ -1,0 +1,13 @@
+[+] Reading structure file: /Users/kamal/Documents/NYU/bergelson-huang-lab/interaction-fastas/binding-affinities/artifacts/fold_2024_07_30_14_12_at4g02590_harxl10_waco9_model_0.pdb
+[+] Parsed structure file fold_2024_07_30_14_12_at4g02590_harxl10_waco9_model_0 (2 chains, 531 residues)
+[+] No. of intermolecular contacts: 160
+[+] No. of charged-charged contacts: 15
+[+] No. of charged-polar contacts: 15
+[+] No. of charged-apolar contacts: 36
+[+] No. of polar-polar contacts: 3
+[+] No. of apolar-polar contacts: 32
+[+] No. of apolar-apolar contacts: 59
+[+] Percentage of apolar NIS residues: 48.92
+[+] Percentage of charged NIS residues: 24.03
+[++] Predicted binding affinity (kcal.mol-1):    -15.2
+[++] Predicted dissociation constant (M) at 25.0˚C:  7.4e-12

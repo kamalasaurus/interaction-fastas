@@ -1,0 +1,24 @@
+#!/bin/bash
+
+for f in ./artifacts/*.pdb; do
+    # Extract the name of the file
+    name=$(basename $f)
+    name=${name%.*}
+    outputfile="./artifacts/$name.out"
+    log="./artifacts/$name.log"
+    cmd="prodigy $f --selection A B --temperature 25.0 --contact_list --pymol_selection"
+    
+    # Print to stdio and write to file
+    echo "command: $cmd" | tee -a $outputfile
+    $cmd 2>&1 | tee -a $log
+    
+    status=$?
+    
+    # Print to stdio and write to file
+    echo "exit status: $status" | tee -a $outputfile
+    echo "log:" | tee -a $outputfile
+    cat $log | tee -a $outputfile
+    
+    # Print to stdio and write to results file
+    echo "$name $status" | tee -a ./results.txt
+done

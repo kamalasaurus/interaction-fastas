@@ -1,0 +1,12 @@
+color silver
+as cartoon
+bg_color white
+center
+color lightblue, chain A
+color lightpink, chain B
+select iface1,  chain A and resi 377+224+497+221+295+61+302+448+301+216+263+259+175+451+299+341+332+294+180+255+178+260+264+338+410+450+177+454+181+256+342+453+303+98+412+333+176+215+217+337+411+220+371+449+376+103+139+370+104+100+452+372+334+298+293+218+373+254+99
+color blue, iface1
+show sticks, iface1
+select iface2,  chain B and resi 142+295+24+29+144+26+140+33+40+10+296+48+294+21+32+238+34+289+23+237+235+37+236+145+141+39+240+43+25+143+297+292+290+41+239+8+9+36+232+243+2+45+293+20+44
+color hotpink, iface2
+show sticks, iface2

@@ -1,0 +1,16 @@
+command: prodigy ./artifacts/fold_2024_07_18_11_52_at5g56950_harxl79_model_0.pdb --selection A B --temperature 25.0 --contact_list --pymol_selection
+exit status: 0
+log:
+[+] Reading structure file: /Users/kamal/Documents/NYU/bergelson-huang-lab/interaction-fastas/binding-affinities/artifacts/fold_2024_07_18_11_52_at5g56950_harxl79_model_0.pdb
+[+] Parsed structure file fold_2024_07_18_11_52_at5g56950_harxl79_model_0 (2 chains, 555 residues)
+[+] No. of intermolecular contacts: 102
+[+] No. of charged-charged contacts: 20
+[+] No. of charged-polar contacts: 7
+[+] No. of charged-apolar contacts: 24
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 16
+[+] No. of apolar-apolar contacts: 33
+[+] Percentage of apolar NIS residues: 35.29
+[+] Percentage of charged NIS residues: 40.20
+[++] Predicted binding affinity (kcal.mol-1):    -11.3
+[++] Predicted dissociation constant (M) at 25.0˚C:  4.9e-09

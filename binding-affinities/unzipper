@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Unzip the file
+
+for f in ../output/**/*.zip; do
+    unzip -o $f '*_0.cif' -d ./artifacts/
+    unzip -o $f '*confidences_0.json' -d ./artifacts/
+    unzip -o $f '*request.json' -d ./artifacts/
+done
