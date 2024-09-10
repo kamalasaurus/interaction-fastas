@@ -58,6 +58,14 @@ plot1 <- ggplot(split_df, aes(x = disordered_bin, y = affinity)) +
        y = "Mean Affinity") +
   theme_minimal()
 
+plot1a <- ggplot(split_df, aes(x = disordered_bin, y = affinity)) +
+  geom_violin() +
+  labs(title = "Box Plot of Affinity by Fraction Disordered",
+       x = "Fraction Disordered",
+       y = "Mean Affinity") +
+  theme_minimal()
+
+
 ggsave("boxplot_affinity_by_fraction_disordered.png", plot = plot1, width = 8, height = 6, device = "png", bg = "white")
 
 plot2 <- ggplot(split_df, aes(x = disordered_bin, y = confidence)) +
@@ -67,7 +75,41 @@ plot2 <- ggplot(split_df, aes(x = disordered_bin, y = confidence)) +
        y = "Confidence (0.2*pTM+0.8*ipTM)") +
   theme_minimal()
 
+plot2a <- ggplot(split_df, aes(x = disordered_bin, y = confidence)) +
+  geom_violin() +
+  labs(title = "Box Plot of Confidence by Fraction Disordered",
+       x = "Fraction Disordered",
+       y = "Confidence (0.2*pTM+0.8*ipTM)") +
+  theme_minimal()
+
 ggsave("histogram_affinity.png", plot = plot2, width = 8, height = 6, device = "png", bg = "white")
+
+
+# Use the cut function to create a factor for the ranges
+full_affinities$confidence_bin <- cut(full_affinities$confidence, breaks = breaks, include.lowest = TRUE)
+
+# Split the data frame into subsets based on the disordered_bin column
+split_conf_data <- split(full_affinities, full_affinities$confidence_bin)
+
+split_conf_df <- as.data.frame(do.call(rbind, split_conf_data))
+
+plot3 <- ggplot(split_conf_df, aes(x = confidence_bin, y = affinity)) +
+  geom_boxplot() +
+  labs(title = "Box Plot of Affinity by Confidence",
+       x = "Confidence (0.2*pTM+0.8*ipTM)",
+       y = "Mean Affinity") +
+  theme_minimal()
+
+plot3a <- ggplot(split_conf_df, aes(x = confidence_bin, y = affinity)) +
+  geom_violin() +
+  labs(title = "Box Plot of Affinity by Confidence",
+       x = "Confidence (0.2*pTM+0.8*ipTM)",
+       y = "Mean Affinity") +
+  theme_minimal()
+
+ggsave("confidence_affinity.png", plot = plot3, width = 8, height = 6, device = "png", bg = "white")
+
+
 
 #library(dplyr)
 
