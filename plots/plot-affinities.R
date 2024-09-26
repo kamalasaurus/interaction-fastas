@@ -65,13 +65,15 @@ plot1a <- ggplot(split_df, aes(x = disordered_bin, y = affinity)) +
        y = "Mean Affinity") +
   theme_minimal()
 
-plot1 <- ggplot(split_df, aes(x = disordered_bin, y = affinity)) +
+plot1b <- ggplot(split_df, aes(x = disordered_bin, y = affinity)) +
   geom_boxplot() +
   labs(title = "Box Plot of Affinity by Fraction Disordered",
        x = "Fraction Disordered",
        y = "Mean Affinity") +
   geom_jitter(height = 0, width = NULL) +
   theme_minimal()
+
+ggsave("boxplot_affinity_by_fraction_disordered_jitter.png", plot = plot1b, width = 8, height = 6, device = "png", bg = "white")
 
 ggsave("boxplot_affinity_by_fraction_disordered.png", plot = plot1, width = 8, height = 6, device = "png", bg = "white")
 
